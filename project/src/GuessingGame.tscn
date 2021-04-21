@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/GuessingGame.gd" type="Script" id=1]
 [ext_resource path="res://assets/icon.png" type="Texture" id=2]
+[ext_resource path="res://src/SolutionHighlightingTimer.gd" type="Script" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "success"
@@ -90,7 +91,7 @@ __meta__ = {
 }
 
 [node name="FactContainer" type="CenterContainer" parent="."]
-modulate = Color( 1, 1, 1, 0.2 )
+modulate = Color( 1, 1, 1, 0 )
 margin_left = 147.0
 margin_top = 481.0
 margin_right = 944.0
@@ -106,3 +107,8 @@ margin_top = 49.0
 margin_right = 450.0
 margin_bottom = 63.0
 text = "Sample fact text"
+
+[node name="SolutionHighlightingTimer" type="Timer" parent="."]
+wait_time = 0.25
+script = ExtResource( 3 )
+[connection signal="timeout" from="SolutionHighlightingTimer" to="SolutionHighlightingTimer" method="_on_SolutionHighlightingTimer_timeout"]

@@ -52,12 +52,17 @@ func _on_GuessButton_pressed(button:Button):
 	if button.correct:
 		_show_success(button)
 	else:
-		_show_failure(button)
+		_show_failure()
 
 
 func _show_success(button:Button):
 	_fact_label.text = "%s\n\n%s" % [button.text, button.fact]
 	$AnimationPlayer.play("success")
 
-func _show_failure(_button:Button):
-	print("Failure")
+
+func _show_failure():
+	for button in _button_grid.get_children():
+		if button.correct:
+			$SolutionHighlightingTimer.button = button
+			$SolutionHighlightingTimer.start()
+			return
