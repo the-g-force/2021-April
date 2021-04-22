@@ -55,6 +55,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("NextButton:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [node name="GuessingGame" type="Control"]
 anchor_right = 1.0
@@ -67,7 +79,8 @@ __meta__ = {
 [node name="ButtonGrid" type="GridContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 298.0
+margin_top = 245.023
+margin_bottom = -52.9765
 custom_constants/vseparation = 20
 custom_constants/hseparation = 20
 columns = 2
@@ -103,7 +116,7 @@ anims/success = SubResource( 1 )
 [node name="FlowerImage" type="TextureRect" parent="CanvasLayer"]
 anchor_left = 0.21875
 anchor_right = 0.811523
-anchor_bottom = 0.425
+anchor_bottom = 0.293333
 texture = ExtResource( 2 )
 expand = true
 stretch_mode = 6
@@ -111,13 +124,25 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="FactContainer" type="CenterContainer" parent="."]
+[node name="FactContainer" type="Control" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = 147.0
-margin_top = 481.0
-margin_right = 944.0
-margin_bottom = 594.0
+anchor_left = 0.144
+anchor_top = 0.711
+anchor_right = 0.922
+anchor_bottom = 0.899
+margin_left = -0.456009
+margin_top = -0.0472107
+margin_right = -0.128052
+margin_bottom = 0.152771
 mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="FactBackground" type="ColorRect" parent="FactContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.435294, 0.27451, 0.27451, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -133,4 +158,13 @@ text = "Sample fact text"
 wait_time = 0.25
 script = ExtResource( 3 )
 
+[node name="NextButton" type="Button" parent="."]
+visible = false
+margin_left = 466.755
+margin_top = 564.0
+margin_right = 556.755
+margin_bottom = 593.0
+text = "Next"
+
 [connection signal="timeout" from="SolutionHighlightingTimer" to="SolutionHighlightingTimer" method="_on_SolutionHighlightingTimer_timeout"]
+[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]

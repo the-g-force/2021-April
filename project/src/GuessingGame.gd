@@ -57,8 +57,14 @@ func _show_success(button:Button):
 
 
 func _show_failure():
+	$NextButton.visible = true
 	for button in _button_grid.get_children():
 		if button.correct:
 			$SolutionHighlightingTimer.button = button
 			$SolutionHighlightingTimer.start()
 			return
+
+
+func _on_NextButton_pressed():
+	print("TODO: Figure out the next thing to go to, and go there")
+	get_tree().change_scene_to(load("res://src/GuessingGame.tscn"))
