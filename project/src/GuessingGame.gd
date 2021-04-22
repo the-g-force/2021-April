@@ -31,18 +31,14 @@ func _ready():
 	var options = FLOWERS
 	_flower_image.texture = options[0].image
 	
-	# The fact that the first of the four buttons is correct
-	# is currently hard-coded here.
 	for i in range(0,4):
-		var b := Button.new()
-		b.set_script(preload("res://src/GuessButton.gd"))
+		var b := _button_grid.get_child(i)
 		b.fact = options[i].fact
 		b.text = options[i].name
-		b.size_flags_horizontal = SIZE_EXPAND_FILL
-		b.size_flags_vertical = SIZE_EXPAND_FILL
+		# The fact that the first of the four buttons is correct
+		# is currently hard-coded here.
 		b.correct = i == 0
 		b.connect("pressed", self, "_on_GuessButton_pressed", [b], CONNECT_ONESHOT)
-		$ButtonGrid.add_child(b)
 
 
 func _on_GuessButton_pressed(button:Button):
