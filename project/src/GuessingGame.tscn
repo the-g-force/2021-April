@@ -67,6 +67,18 @@ tracks/4/keys = {
 "update": 1,
 "values": [ true ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("FactContainer:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [node name="GuessingGame" type="Control"]
 anchor_right = 1.0
@@ -125,6 +137,7 @@ __meta__ = {
 }
 
 [node name="FactContainer" type="Control" parent="."]
+visible = false
 modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.144
 anchor_top = 0.711
@@ -134,7 +147,7 @@ margin_left = -0.456009
 margin_top = -0.0472107
 margin_right = -0.128052
 margin_bottom = 0.152771
-mouse_filter = 2
+mouse_filter = 1
 __meta__ = {
 "_edit_use_anchors_": true
 }
@@ -142,6 +155,7 @@ __meta__ = {
 [node name="FactBackground" type="ColorRect" parent="FactContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 1
 color = Color( 0.435294, 0.27451, 0.27451, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -152,6 +166,7 @@ margin_left = 347.0
 margin_top = 49.0
 margin_right = 450.0
 margin_bottom = 63.0
+mouse_filter = 1
 text = "Sample fact text"
 
 [node name="SolutionHighlightingTimer" type="Timer" parent="."]
@@ -165,6 +180,9 @@ margin_top = 564.0
 margin_right = 556.755
 margin_bottom = 593.0
 text = "Next"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="timeout" from="SolutionHighlightingTimer" to="SolutionHighlightingTimer" method="_on_SolutionHighlightingTimer_timeout"]
 [connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]

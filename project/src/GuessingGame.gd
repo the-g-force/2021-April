@@ -1,5 +1,7 @@
 extends Control
 
+signal next
+
 const FLOWERS = [
 	{
 		"name": "Trout Lily",
@@ -66,5 +68,4 @@ func _show_failure():
 
 
 func _on_NextButton_pressed():
-	print("TODO: Figure out the next thing to go to, and go there")
-	get_tree().change_scene_to(load("res://src/GuessingGame.tscn"))
+	emit_signal("next")
