@@ -3,7 +3,7 @@
 [ext_resource path="res://src/GuessingGame.gd" type="Script" id=1]
 [ext_resource path="res://assets/icon.png" type="Texture" id=2]
 [ext_resource path="res://src/SolutionHighlightingTimer.gd" type="Script" id=3]
-[ext_resource path="res://src/GuessButton.gd" type="Script" id=4]
+[ext_resource path="res://src/GuessButton.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Animation" id=1]
 resource_name = "success"
@@ -75,37 +75,25 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button1" type="Button" parent="ButtonGrid"]
+[node name="GuessButton1" parent="ButtonGrid" instance=ExtResource( 4 )]
 margin_right = 502.0
 margin_bottom = 141.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource( 4 )
 
-[node name="Button2" type="Button" parent="ButtonGrid"]
+[node name="GuessButton2" parent="ButtonGrid" instance=ExtResource( 4 )]
 margin_left = 522.0
 margin_right = 1024.0
 margin_bottom = 141.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource( 4 )
 
-[node name="Button3" type="Button" parent="ButtonGrid"]
+[node name="GuessButton3" parent="ButtonGrid" instance=ExtResource( 4 )]
 margin_top = 161.0
 margin_right = 502.0
 margin_bottom = 302.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource( 4 )
 
-[node name="Button4" type="Button" parent="ButtonGrid"]
+[node name="GuessButton4" parent="ButtonGrid" instance=ExtResource( 4 )]
 margin_left = 522.0
 margin_top = 161.0
 margin_right = 1024.0
 margin_bottom = 302.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource( 4 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/success = SubResource( 1 )
