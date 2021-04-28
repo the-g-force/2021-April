@@ -27,10 +27,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 1 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ false, true ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("FactContainer:visible")
@@ -39,10 +39,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0.5 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ false, true ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("FlowerImage:rect_size")
@@ -146,6 +146,8 @@ __meta__ = {
 [node name="FactLabel" type="Label" parent="FactContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 12.0
+margin_right = -12.0
 mouse_filter = 1
 text = "Flower name
 
@@ -163,9 +165,9 @@ script = ExtResource( 3 )
 [node name="NextButton" type="Button" parent="."]
 visible = false
 margin_left = 205.951
-margin_top = 564.0
+margin_top = 558.0
 margin_right = 295.951
-margin_bottom = 593.0
+margin_bottom = 590.0
 text = "Next"
 __meta__ = {
 "_edit_use_anchors_": false
