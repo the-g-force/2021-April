@@ -12,13 +12,14 @@ func _ready():
 	var options = FLOWERS
 	_flower_image.texture = options[0].image
 	
+	options.shuffle()
+	var correct_index := randi() % 4
+	
 	for i in range(0,4):
 		var b := _button_grid.get_child(i)
 		b.fact = options[i].fact
 		b.text = options[i].name
-		# The fact that the first of the four buttons is correct
-		# is currently hard-coded here.
-		b.correct = i == 0
+		b.correct = i == correct_index
 		b.connect("pressed", self, "_on_GuessButton_pressed", [b], CONNECT_ONESHOT)
 
 
