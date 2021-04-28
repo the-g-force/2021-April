@@ -23,7 +23,7 @@ const FLOWERS = [
 		"fact": "It is a placeholder"
 	},
 	{
-		"name": "Dutchmans Breeches",
+		"name": "Dutchman's Breeches",
 		"image": preload("res://assets/flowers/DutchmansBreeches.png"),
 		"fact": "It is named after a fish"
 	},
