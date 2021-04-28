@@ -15,7 +15,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Wildflowers"
-run/main_scene="res://src/SplashScreen.tscn"
+run/main_scene="res://src/TitleScreen.tscn"
 config/icon="res://assets/icon.png"
 
 [debug]
