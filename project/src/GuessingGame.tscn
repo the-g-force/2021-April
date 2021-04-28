@@ -21,19 +21,19 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("NextButton:visible")
+tracks/1/path = NodePath("FactContainer:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("FactContainer:visible")
+tracks/2/path = NodePath("FlowerImage:rect_size")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -41,11 +41,11 @@ tracks/2/enabled = true
 tracks/2/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
+"update": 0,
+"values": [ Vector2( 500, 325 ), Vector2( 500, 426 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("FlowerImage:rect_size")
+tracks/3/path = NodePath("FlowerImage:rect_position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -54,19 +54,19 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 500, 325 ), Vector2( 500, 426 ) ]
+"values": [ Vector2( 0, 25 ), Vector2( 0, 0 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("FlowerImage:rect_position")
+tracks/4/path = NodePath("NavigationButtonBox:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.5 ),
+"times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 25 ), Vector2( 0, 0 ) ]
+"update": 1,
+"values": [ false, true ]
 }
 
 [node name="GuessingGame" type="Control"]
@@ -120,7 +120,7 @@ transform = Transform2D( 1.5, 0, 0, 1.5, -250, 100 )
 
 [node name="FactContainer" type="Control" parent="."]
 visible = false
-modulate = Color( 1, 1, 1, 0.2 )
+modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.1
 anchor_top = 0.711
 anchor_right = 0.9
@@ -162,17 +162,6 @@ __meta__ = {
 wait_time = 0.25
 script = ExtResource( 3 )
 
-[node name="NextButton" type="Button" parent="."]
-visible = false
-margin_left = 205.951
-margin_top = 558.0
-margin_right = 295.951
-margin_bottom = 590.0
-text = "Next"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="FlowerImage" type="TextureRect" parent="."]
 margin_top = 25.0
 margin_right = 500.0
@@ -184,5 +173,36 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="NavigationButtonBox" type="HBoxContainer" parent="."]
+visible = false
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -39.937
+margin_bottom = -7.93701
+custom_constants/separation = 20
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitButton" type="Button" parent="NavigationButtonBox"]
+margin_left = 160.0
+margin_right = 240.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 80, 35 )
+text = "Exit"
+
+[node name="NextButton" type="Button" parent="NavigationButtonBox"]
+margin_left = 260.0
+margin_right = 340.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 80, 35 )
+text = "Next"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="timeout" from="SolutionHighlightingTimer" to="SolutionHighlightingTimer" method="_on_SolutionHighlightingTimer_timeout"]
-[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
+[connection signal="pressed" from="NavigationButtonBox/ExitButton" to="." method="_on_ExitButton_pressed"]
+[connection signal="pressed" from="NavigationButtonBox/NextButton" to="." method="_on_NextButton_pressed"]

@@ -39,7 +39,7 @@ func _show_success(button:Button):
 
 
 func _show_failure():
-	$NextButton.visible = true
+	$NavigationButtonBox.visible = true
 	for button in _button_grid.get_children():
 		if button.correct:
 			$SolutionHighlightingTimer.button = button
@@ -49,3 +49,7 @@ func _show_failure():
 
 func _on_NextButton_pressed():
 	emit_signal("next")
+
+
+func _on_ExitButton_pressed():
+	get_tree().change_scene("res://src/TitleScreen.tscn")
