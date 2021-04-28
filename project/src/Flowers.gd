@@ -15,17 +15,17 @@ const FLOWERS = [
 	{
 		"name": "Bloodroot",
 		"image": preload("res://assets/flowers/Bloodroot.png"),
-		"fact": "It is named after a fish"
+		"fact": "It has a red-orange sap."
 	},
 	{
-		"name": "Bluebells",
+		"name": "Virginia Bluebells",
 		"image": preload("res://assets/flowers/bluebells-color.png"),
-		"fact": "It is a placeholder"
+		"fact": "We think they smell like vanilla. Smell one and see if you agree!"
 	},
 	{
 		"name": "Dutchman's Breeches",
 		"image": preload("res://assets/flowers/DutchmansBreeches.png"),
-		"fact": "It is named after a fish"
+		"fact": "It has pantaloon-shaped flowers."
 	},
 	{
 		"name": "False Solomon's Seal",
@@ -50,12 +50,12 @@ const FLOWERS = [
 	{
 		"name": "Sessile Trillium",
 		"image": preload("res://assets/flowers/SessileTrillium.png"),
-		"fact": "It is a placeholder"
+		"fact": "It has a red berry."
 	},
 	{
 		"name": "Twinleaf",
 		"image": preload("res://assets/flowers/Twinleaf.png"),
-		"fact": "It is a placeholder"
+		"fact": "Only one other species exists. It is found in Japan."
 	},
 		{
 		"name": "Trout Lily",
