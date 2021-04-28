@@ -2,28 +2,7 @@ extends Control
 
 signal next
 
-const FLOWERS = [
-	{
-		"name": "Trout Lily",
-		"image": preload("res://assets/icon.png"),
-		"fact": "It is named after a fish"
-	},
-	{
-		"name": "Placeholder 1",
-		"image": preload("res://assets/icon.png"),
-		"fact": "It is a placeholder"
-	},
-	{
-		"name": "Placeholder 2",
-		"image": preload("res://assets/icon.png"),
-		"fact": "It is a placeholder"
-	},
-	{
-		"name": "Placeholder 3",
-		"image": preload("res://assets/icon.png"),
-		"fact": "It is a placeholder"
-	},
-]
+const FLOWERS = preload("res://src/Flowers.gd").FLOWERS
 
 onready var _flower_image := $CanvasLayer/FlowerImage
 onready var _button_grid := $ButtonGrid
