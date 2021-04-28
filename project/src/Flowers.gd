@@ -1,11 +1,7 @@
 extends Node
 
 const FLOWERS = [
-	{
-		"name": "Trout Lily",
-		"image": preload("res://assets/flowers/TroutLily.png"),
-		"fact": "It is named after a fish"
-	},
+
 	{
 		"name": "Spring Beauties",
 		"image": preload("res://assets/flowers/beauties.png"),
@@ -17,9 +13,19 @@ const FLOWERS = [
 		"fact": "It is a placeholder"
 	},
 	{
+		"name": "Bloodroot",
+		"image": preload("res://assets/flowers/Bloodroot.png"),
+		"fact": "It is named after a fish"
+	},
+	{
 		"name": "Bluebells",
 		"image": preload("res://assets/flowers/bluebells-color.png"),
 		"fact": "It is a placeholder"
+	},
+	{
+		"name": "Dutchmans Breeches",
+		"image": preload("res://assets/flowers/DutchmansBreeches.png"),
+		"fact": "It is named after a fish"
 	},
 	{
 		"name": "False Solomon's Seal",
@@ -41,4 +47,19 @@ const FLOWERS = [
 		"image": preload("res://assets/flowers/nodding-trillium.png"),
 		"fact": "It is a placeholder"
 	},
+	{
+		"name": "Sessile Trillium",
+		"image": preload("res://assets/flowers/SessileTrillium.png"),
+		"fact": "It is a placeholder"
+	},
+	{
+		"name": "Twinleaf",
+		"image": preload("res://assets/flowers/Twinleaf.png"),
+		"fact": "It is a placeholder"
+	},
+		{
+		"name": "Trout Lily",
+		"image": preload("res://assets/flowers/TroutLily.png"),
+		"fact": "It is named after a fish"
+	}
 ]
