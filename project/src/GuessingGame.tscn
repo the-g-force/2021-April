@@ -53,7 +53,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1024, 325 ), Vector2( 1024, 426 ) ]
+"values": [ Vector2( 500, 325 ), Vector2( 500, 426 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("FlowerImage:rect_position")
@@ -89,23 +89,23 @@ __meta__ = {
 }
 
 [node name="GuessButton1" parent="ButtonGrid" instance=ExtResource( 4 )]
-margin_right = 502.0
+margin_right = 240.0
 margin_bottom = 72.0
 
 [node name="GuessButton2" parent="ButtonGrid" instance=ExtResource( 4 )]
-margin_left = 522.0
-margin_right = 1024.0
+margin_left = 260.0
+margin_right = 500.0
 margin_bottom = 72.0
 
 [node name="GuessButton3" parent="ButtonGrid" instance=ExtResource( 4 )]
 margin_top = 92.0
-margin_right = 502.0
+margin_right = 240.0
 margin_bottom = 164.0
 
 [node name="GuessButton4" parent="ButtonGrid" instance=ExtResource( 4 )]
-margin_left = 522.0
+margin_left = 260.0
 margin_top = 92.0
-margin_right = 1024.0
+margin_right = 500.0
 margin_bottom = 164.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -161,9 +161,9 @@ script = ExtResource( 3 )
 
 [node name="NextButton" type="Button" parent="."]
 visible = false
-margin_left = 466.755
+margin_left = 205.951
 margin_top = 564.0
-margin_right = 556.755
+margin_right = 295.951
 margin_bottom = 593.0
 text = "Next"
 __meta__ = {
@@ -172,7 +172,7 @@ __meta__ = {
 
 [node name="FlowerImage" type="TextureRect" parent="."]
 margin_top = 25.0
-margin_right = 1024.0
+margin_right = 500.0
 margin_bottom = 350.0
 texture = ExtResource( 2 )
 expand = true
