@@ -1,83 +1,71 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/GuessingGame.gd" type="Script" id=1]
-[ext_resource path="res://assets/icon.png" type="Texture" id=2]
+[ext_resource path="res://assets/flowers/beauties.png" type="Texture" id=2]
 [ext_resource path="res://src/SolutionHighlightingTimer.gd" type="Script" id=3]
 [ext_resource path="res://src/GuessButton.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Animation" id=1]
 resource_name = "success"
 tracks/0/type = "value"
-tracks/0/path = NodePath("CanvasLayer:transform")
+tracks/0/path = NodePath("FactContainer:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
-"update": 0,
-"values": [  ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("CanvasLayer:offset")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( -250, 100 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("CanvasLayer:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("FactContainer:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
 "times": PoolRealArray( 0.5, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
-tracks/4/type = "value"
-tracks/4/path = NodePath("NextButton:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
+tracks/1/type = "value"
+tracks/1/path = NodePath("NextButton:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
 "times": PoolRealArray( 1 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
-tracks/5/type = "value"
-tracks/5/path = NodePath("FactContainer:visible")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
+tracks/2/type = "value"
+tracks/2/path = NodePath("FactContainer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
 "times": PoolRealArray( 0.5 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("FlowerImage:rect_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1024, 325 ), Vector2( 1024, 426 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("FlowerImage:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 25 ), Vector2( 0, 0 ) ]
 }
 
 [node name="GuessingGame" type="Control"]
@@ -91,8 +79,8 @@ __meta__ = {
 [node name="ButtonGrid" type="GridContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 245.023
-margin_bottom = -52.9765
+margin_top = 382.0
+margin_bottom = -53.0
 custom_constants/vseparation = 20
 custom_constants/hseparation = 20
 columns = 2
@@ -102,39 +90,31 @@ __meta__ = {
 
 [node name="GuessButton1" parent="ButtonGrid" instance=ExtResource( 4 )]
 margin_right = 502.0
-margin_bottom = 141.0
+margin_bottom = 72.0
 
 [node name="GuessButton2" parent="ButtonGrid" instance=ExtResource( 4 )]
 margin_left = 522.0
 margin_right = 1024.0
-margin_bottom = 141.0
+margin_bottom = 72.0
 
 [node name="GuessButton3" parent="ButtonGrid" instance=ExtResource( 4 )]
-margin_top = 161.0
+margin_top = 92.0
 margin_right = 502.0
-margin_bottom = 302.0
+margin_bottom = 164.0
 
 [node name="GuessButton4" parent="ButtonGrid" instance=ExtResource( 4 )]
 margin_left = 522.0
-margin_top = 161.0
+margin_top = 92.0
 margin_right = 1024.0
-margin_bottom = 302.0
+margin_bottom = 164.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/success = SubResource( 1 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="FlowerImage" type="TextureRect" parent="CanvasLayer"]
-anchor_left = 0.21875
-anchor_right = 0.811523
-anchor_bottom = 0.293333
-texture = ExtResource( 2 )
-expand = true
-stretch_mode = 6
-__meta__ = {
-"_edit_use_anchors_": true
-}
+offset = Vector2( -250, 100 )
+scale = Vector2( 1.5, 1.5 )
+transform = Transform2D( 1.5, 0, 0, 1.5, -250, 100 )
 
 [node name="FactContainer" type="Control" parent="."]
 visible = false
@@ -147,7 +127,7 @@ margin_left = -0.456009
 margin_top = -0.0472107
 margin_right = -0.128052
 margin_bottom = 0.152771
-mouse_filter = 1
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": true
 }
@@ -174,12 +154,22 @@ wait_time = 0.25
 script = ExtResource( 3 )
 
 [node name="NextButton" type="Button" parent="."]
-visible = false
 margin_left = 466.755
 margin_top = 564.0
 margin_right = 556.755
 margin_bottom = 593.0
 text = "Next"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FlowerImage" type="TextureRect" parent="."]
+margin_top = 25.0
+margin_right = 1024.0
+margin_bottom = 350.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -4,7 +4,7 @@ signal next
 
 const FLOWERS = preload("res://src/Flowers.gd").FLOWERS
 
-onready var _flower_image := $CanvasLayer/FlowerImage
+onready var _flower_image := $FlowerImage
 onready var _button_grid := $ButtonGrid
 onready var _fact_label := $FactContainer/FactLabel
 
