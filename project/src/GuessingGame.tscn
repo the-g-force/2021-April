@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/GuessingGame.gd" type="Script" id=1]
 [ext_resource path="res://assets/flowers/beauties.png" type="Texture" id=2]
 [ext_resource path="res://src/SolutionHighlightingTimer.gd" type="Script" id=3]
 [ext_resource path="res://src/GuessButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/resources/theme.tres" type="Theme" id=5]
 
 [sub_resource type="Animation" id=1]
 resource_name = "success"
@@ -71,6 +72,7 @@ tracks/4/keys = {
 [node name="GuessingGame" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 5 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -118,10 +120,10 @@ transform = Transform2D( 1.5, 0, 0, 1.5, -250, 100 )
 
 [node name="FactContainer" type="Control" parent="."]
 visible = false
-modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.2
+modulate = Color( 1, 1, 1, 0.2 )
+anchor_left = 0.1
 anchor_top = 0.711
-anchor_right = 0.8
+anchor_right = 0.9
 anchor_bottom = 0.899
 margin_left = -0.456009
 margin_top = -0.0472107
@@ -144,7 +146,6 @@ __meta__ = {
 [node name="FactLabel" type="Label" parent="FactContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 20.0
 mouse_filter = 1
 text = "Flower name
 
