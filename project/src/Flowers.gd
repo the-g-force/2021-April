@@ -5,7 +5,7 @@ const FLOWERS = [
 	{
 		"name": "Spring Beauties",
 		"image": preload("res://assets/flowers/beauties.png"),
-		"fact": "It is a placeholder"
+		"fact": "The tuber root tastes like sweet chestnuts."
 	},
 	{
 		"name": "Bellwort",
