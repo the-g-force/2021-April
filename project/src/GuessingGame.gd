@@ -10,10 +10,10 @@ onready var _fact_label := $FactContainer/FactLabel
 
 func _ready():
 	var options = FLOWERS
-	_flower_image.texture = options[0].image
-	
 	options.shuffle()
-	var correct_index := randi() % 4
+	
+	var correct_index := randi() % 4	
+	_flower_image.texture = options[correct_index].image
 	
 	for i in range(0,4):
 		var b := _button_grid.get_child(i)

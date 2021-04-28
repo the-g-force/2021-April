@@ -35,7 +35,7 @@ const FLOWERS = [
 	{
 		"name": "Wild Ginger",
 		"image": preload("res://assets/flowers/ginger.png"),
-		"fact": "It is a placeholder"
+		"fact": "Bruised roots and stems emit a ginger-like aroma."
 	},
 	{
 		"name": "Jack-in-the-Pulpit",
@@ -45,7 +45,7 @@ const FLOWERS = [
 	{
 		"name": "Nodding Trillium",
 		"image": preload("res://assets/flowers/nodding-trillium.png"),
-		"fact": "It is a placeholder"
+		"fact": "The short stalk of this flower is curved so that the flower hangs beneath the leaves."
 	},
 	{
 		"name": "Sessile Trillium",
