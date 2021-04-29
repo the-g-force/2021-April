@@ -33,5 +33,4 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/FlyOut = SubResource( 1 )
-
 [connection signal="next" from="CanvasLayer/GuessingGame" to="." method="_on_GuessingGame_next"]

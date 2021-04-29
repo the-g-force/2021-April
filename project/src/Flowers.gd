@@ -5,12 +5,12 @@ const FLOWERS = [
 	{
 		"name": "Spring Beauties",
 		"image": preload("res://assets/flowers/beauties.png"),
-		"fact": "The tuber root tastes like sweet chestnuts."
+		"fact": "Among the first to bloom in spring."
 	},
 	{
 		"name": "Bellwort",
 		"image": preload("res://assets/flowers/bellwort.png"),
-		"fact": "It is a placeholder"
+		"fact": "In one of the two species, the stem pierces the leaves, as shown here."
 	},
 	{
 		"name": "Bloodroot",
@@ -30,7 +30,7 @@ const FLOWERS = [
 	{
 		"name": "False Solomon's Seal",
 		"image": preload("res://assets/flowers/false-solomon.png"),
-		"fact": "It is a placeholder"
+		"fact": "The leaves grow in a zig-zag arrangement with a single spire of flowers at the tip."
 	},
 	{
 		"name": "Wild Ginger",
@@ -40,7 +40,7 @@ const FLOWERS = [
 	{
 		"name": "Jack-in-the-Pulpit",
 		"image": preload("res://assets/flowers/jack-pulpit.png"),
-		"fact": "It is a placeholder"
+		"fact": "If cooked, jack-in-the-pulpit corns are edible."
 	},
 	{
 		"name": "Nodding Trillium",
@@ -58,8 +58,13 @@ const FLOWERS = [
 		"fact": "Only one other species exists. It is found in Japan."
 	},
 		{
-		"name": "Trout Lily",
+		"name": "Yellow Trout Lily",
 		"image": preload("res://assets/flowers/TroutLily.png"),
-		"fact": "It is named after a fish"
+		"fact": "It is also known as the Dogtooth Violet. There are yellow and white varieties."
+	},
+	{
+		"name": "Solomon's Seal",
+		"image": preload("res://assets/flowers/solomon.png"),
+		"fact": "It's taller than False Solomon's Seal and bears bluish berries in autumn."
 	}
 ]

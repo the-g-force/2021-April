@@ -202,7 +202,6 @@ text = "Next"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
 [connection signal="timeout" from="SolutionHighlightingTimer" to="SolutionHighlightingTimer" method="_on_SolutionHighlightingTimer_timeout"]
 [connection signal="pressed" from="NavigationButtonBox/ExitButton" to="." method="_on_ExitButton_pressed"]
 [connection signal="pressed" from="NavigationButtonBox/NextButton" to="." method="_on_NextButton_pressed"]

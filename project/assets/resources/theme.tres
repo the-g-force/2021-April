@@ -1,6 +1,47 @@
-[gd_resource type="Theme" load_steps=3 format=2]
+[gd_resource type="Theme" load_steps=7 format=2]
 
 [ext_resource path="res://assets/fonts/NunitoSans/NunitoSans-Regular.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.84, 0.6048, 0.64792, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.596078, 0.541176, 0.729412, 1 )
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 1, 0.92, 0.934667, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.596078, 0.541176, 0.729412, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 1, 0.86, 0.881, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.596078, 0.541176, 0.729412, 1 )
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 1, 0.96, 0.966, 1 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 18
@@ -9,3 +50,23 @@ font_data = ExtResource( 1 )
 
 [resource]
 default_font = SubResource( 1 )
+Button/colors/font_color = Color( 0.12549, 0.101961, 0.101961, 1 )
+Button/colors/font_color_disabled = Color( 0.12549, 0.101961, 0.101961, 1 )
+Button/colors/font_color_hover = Color( 0.301961, 0.243137, 0.243137, 1 )
+Button/colors/font_color_pressed = Color( 0.12549, 0.101961, 0.101961, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = null
+Button/styles/disabled = null
+Button/styles/focus = SubResource( 2 )
+Button/styles/hover = SubResource( 4 )
+Button/styles/normal = SubResource( 3 )
+Button/styles/pressed = SubResource( 5 )
+Label/colors/font_color = Color( 0.5866, 0.7, 0.448, 1 )
+Label/colors/font_color_shadow = Color( 0.301961, 0.427451, 0.152941, 1 )
+Label/colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+Label/constants/line_spacing = 3
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/fonts/font = null
+Label/styles/normal = null
