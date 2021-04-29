@@ -2,6 +2,7 @@
 
 A wildflower guessing game.
 
+[Play online now!](https://the-g-force.github.io/2021-April/)
 
 ## Third-Party Assets
 
